@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body{
+            background-color: lightblue;
+        }
+        #ui{
+            background-color:#333;
+            padding:30px;
+            margin-top:50px;
+            border-radius:10px;
+            opacity:0.9;
+        }
+        #ui label,h1{
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <div class="py5 text-center">
+                <img src="{{url_for('static', filename='epass_logo.png')}}" align="middle" height="200" width="800"/>
+                <p class="lead">Please fill the form given below for the e-pass application process. Kindly
+                check all the details before submitting.</p>
+                <p class="lead"> Note: A person can apply again after <strong>3 days</strong> if the application is
+                not approved.</p>
+            </div>
+
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-lg-6">
+                <div id="ui">
+                    <h1 class="text-center">E-Pass Application Form</h1>
+                    <form method="post" action="/login_page">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>First Name :</label>
+                                <input type="text" name="fname" class="form-control" placeholder="">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Last Name :</label>
+                                <input type="text" name="lname" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <br>
+                        <label>Email Id :</label>
+                        <input type="email" name="email" class="form-control" placeholder="">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Source State :</label>
+                                <input type="text" name="source_state" class="form-control" placeholder="">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Source District :</label>
+                                <input type="text" name="source" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>Destination State :</label>
+                                <input type="text" name="dest_state" class="form-control" placeholder="">
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Destination District :</label>
+                                <input type="text" name="destination" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label>Aadhar card number :</label>
+                            <input type="text" name="idcard" class="form-control" placeholder="">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label>Phone Number :</label>
+                            <input type="text" name="phoneNumber" class="form-control" placeholder="">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label>Date of Travel :</label>
+                            <input type="date" name="trip" class="form-control" placeholder="">
+                        </div>
+                        <br>
+                        <input type="submit" name="submit" value="submit" class="btn btn-primary btn-block btn-lg">
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</body>
+</html>
